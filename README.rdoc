@@ -9,3 +9,19 @@ What is covered by the application ?
 * API doc provided by rspec_api_documentation gem and API spec coverage
 
 * Spec coverage for Suggestion model and named scopes
+
+==== How to access ?
+
+Please go to https://dz-autocomplete-api.herokuapp.com
+
+do your query, e.g.
+
+https://dz-autocomplete-api.herokuapp.com/?q=a&min_price=10&max_price=200&cat=1
+
+And see how magic happens !
+
+==== API Documentation ?
+
+Check it here !
+https://github.com/gtrujillop/dz-autocomplete-api/tree/master/doc/api
+
