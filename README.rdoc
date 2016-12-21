@@ -1,28 +1,11 @@
-== README
+== App Description
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a micro API in Ruby on Rails that provides a list or results in JSON format.
 
-Things you may want to cover:
+What is covered by the application ?
 
-* Ruby version
+* Search products (suggestions) by passing params (q, min_price, max_price, cat)
 
-* System dependencies
+* API doc provided by rspec_api_documentation gem and API spec coverage
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* Spec coverage for Suggestion model and named scopes
