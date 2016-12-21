@@ -8,15 +8,18 @@ gem 'rails-api'
 gem 'rack-cors', :require => 'rack/cors'
 gem 'active_model_serializers', '0.10'
 
+gem 'rspec_api_documentation'
+
 gem 'pg', '0.17.1'
 
 group :development, :test do
   gem 'byebug'
   gem 'rspec-rails', '~> 3.0'
-  gem 'factory_girl_rails'
+  gem 'factory_girl_rails', require: false
   gem 'spring'
   gem 'shoulda'
   gem 'thin'
+  gem 'faker'
 end
 
 group :production do
