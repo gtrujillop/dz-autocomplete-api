@@ -15,22 +15,45 @@ class Suggestion < ActiveRecord::Base
 
   def as_indexed_json(options={})
     as_json(
-      only: [:name, :price],
-      include: [:category]
+      only: [:name, :price, :category_id],
+      include: [:category],
+      methods: [:category_name]
     )
   end
 
-  # def self.search(query)
-  #   __elasticsearch__.search(
-  #     {
-  #       query: {
-  #         multi_match: {
-  #           query: query,
-  #           fields: ['name^10', 'price', 'category_id']
-  #         }
-  #       }
-  #     }
-  #   )
-  # end
+  def self.search(criteria)
+    __elasticsearch__.search(
+      {
+        query: {
+          bool: {
+            must: [
+              {
+                wildcard: {
+                  name: "*#{criteria[:q]}*"
+                }
+              },
+              {
+                wildcard: {
+                  category_name: "*#{criteria[:cat]}*"
+                }
+              }
+            ],
+            filter: {
+              range: {
+                price: {
+                  lt: criteria[:max_price],
+                  gt: criteria[:min_price]
+                }
+              }
+            }
+          }
+        }
+      }
+    )
+  end
+
+  def category_name
+    category.name
+  end
 
 end
