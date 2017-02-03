@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   root 'suggestions#index'
   resources :suggestions, only: [:index, :create, :update, :destroy]
   resources :categories, only: [:index]
+
+  get 'search_suggestion', to: 'suggestions_search#search'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

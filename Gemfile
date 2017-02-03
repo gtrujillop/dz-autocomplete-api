@@ -10,6 +10,9 @@ gem 'active_model_serializers', '0.10'
 
 gem 'pg', '0.17.1'
 
+gem 'elasticsearch-model'
+gem 'elasticsearch-rails'
+
 group :development, :test do
   gem 'byebug'
   gem 'rspec-rails', '~> 3.0'
