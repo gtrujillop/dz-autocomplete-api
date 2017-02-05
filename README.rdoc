@@ -18,7 +18,7 @@ Please go to https://dz-autocomplete-api.herokuapp.com
 
 do your query, e.g.
 
-https://dz-autocomplete-api.herokuapp.com/?q=a&min_price=10&max_price=200&cat=1
+https://dz-autocomplete-api.herokuapp.com/?q=a&min_price=10&max_price=200&cat=a
 
 And see how magic happens !
 
