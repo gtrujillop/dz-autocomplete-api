@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'suggestions#index'
+  root 'suggestions_search#search'
   resources :suggestions, only: [:index, :create, :update, :destroy]
   resources :categories, only: [:index]
 
