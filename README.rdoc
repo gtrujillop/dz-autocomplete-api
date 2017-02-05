@@ -6,6 +6,8 @@ What is covered by the application ?
 
 * Search products (suggestions) by passing params (q, min_price, max_price, cat)
 
+* Search using Elasticsearch as search engine by using bonsai in Heroku
+
 * API doc provided by rspec_api_documentation gem and API spec coverage
 
 * Spec coverage for Suggestion model and named scopes
